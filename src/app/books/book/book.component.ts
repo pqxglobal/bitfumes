@@ -1,6 +1,6 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CartService } from 'src/app/cart/cart.service';
-import { Book } from '../../Types/Book';
+import { Book } from '../../types/Book';
 
 @Component({
   selector: 'app-book',
@@ -20,8 +20,8 @@ export class BookComponent implements OnInit {
     this.cartService.add(this.book);
   }
 
-  removeFromCart(){
+  removeFromCart() {
     this.isInCart = false;
-    this.cartService.remove(this.book)
+    this.cartService.remove(this.book);
   }
 }
